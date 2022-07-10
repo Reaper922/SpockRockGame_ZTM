@@ -38,6 +38,17 @@ function resetSelectedIcons() {
   });
 }
 
+function resetAll() {
+  playerScoreNumber = 0;
+  computerScoreNumber = 0;
+  playerScoreEl.textContent = playerScoreNumber;
+  computerScoreEl.textContent = computerScoreNumber;
+  playerChoiceEl.textContent = '';
+  computerChoiceEl.textContent = '';
+  resultText.textContent = '';
+  resetSelectedIcons();
+}
+
 function computerRandomChoice() {
   const computerChoiceNumber = Math.random();
   if(computerChoiceNumber < 0.2) {
@@ -46,7 +57,7 @@ function computerRandomChoice() {
     computerChoice = 'paper';
   } else if(computerChoiceNumber <= 0.6) {
     computerChoice = 'scissors';
-  } else if(computerChoice <= 0.8) {
+  } else if(computerChoiceNumber <= 0.8) {
     computerChoice = 'lizard';
   } else {
     computerChoice = 'spock';
@@ -131,3 +142,5 @@ function select(playerChoice) {
       break;
   }
 }
+
+resetAll();
