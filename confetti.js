@@ -131,4 +131,4 @@ function updateParticles() {
 }
 
 
-export { startConfetti, stopConfettiInner, removeConfettiInner };
+export { startConfetti, stopConfetti, removeConfetti };

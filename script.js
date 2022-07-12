@@ -1,4 +1,4 @@
-import { startConfetti, stopConfettiInner, removeConfettiInner } from "./confetti.js";
+import { startConfetti, stopConfetti, removeConfetti } from "./confetti.js";
 
 const playerScoreEl = document.getElementById('playerScore');
 const playerChoiceEl = document.getElementById('playerChoice');
@@ -38,8 +38,8 @@ function resetSelectedIcons() {
   allGameIcons.forEach((icon) => {
     icon.classList.remove('selected');
   });
-  stopConfettiInner();
-  removeConfettiInner();
+  stopConfetti();
+  removeConfetti();
 }
 
 function resetAll() {
